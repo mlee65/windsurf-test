@@ -1,24 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
 
 function Home() {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Hello World</h1>
-      <Link to="/hello-michael">
-        <button style={{ padding: '10px 20px', fontSize: '16px' }}>Go to Hello Michael</button>
-      </Link>
+    <div className="container">
+      <div className="card">
+        <div className="content">
+          <h1>Hello World</h1>
+          <div className="navigation">
+            <Link to="/hello-michael" className="link">
+              <button>Go to Hello Michael</button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 function HelloMichael() {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Hello Michael</h1>
-      <Link to="/">
-        <button style={{ padding: '10px 20px', fontSize: '16px' }}>Go Back</button>
-      </Link>
+    <div className="container">
+      <div className="card">
+        <div className="content">
+          <h1>Hello Michael</h1>
+          <div className="navigation">
+            <Link to="/" className="link">
+              <button>Go Back</button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
